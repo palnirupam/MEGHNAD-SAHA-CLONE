@@ -1,0 +1,15 @@
+* text=auto
+
+*.html text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.mjs text eol=lf
+
+assets/** binary
+images/** binary
+*.gif binary
+*.jpg binary
+*.png binary
+*.svg binary
+*.woff binary
+*.woff2 binary

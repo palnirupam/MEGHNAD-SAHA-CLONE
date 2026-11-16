@@ -1,0 +1,16 @@
+node_modules/
+.vercel/
+.playwright-mcp/
+
+/local-desktop-*.png
+/local-mobile-*.png
+/original-desktop-*.png
+/original-mobile-*.png
+*.log
+
+.env
+.env.*
+!.env.example
+
+.DS_Store
+Thumbs.db

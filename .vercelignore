@@ -1,0 +1,7 @@
+node_modules
+.playwright-mcp
+server.mjs
+/local-desktop-*.png
+/local-mobile-*.png
+/original-desktop-*.png
+/original-mobile-*.png

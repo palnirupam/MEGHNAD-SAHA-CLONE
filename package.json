@@ -1,0 +1,13 @@
+{
+  "name": "msit-clone",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server.mjs",
+    "deploy": "vercel",
+    "deploy:prod": "vercel --prod"
+  },
+  "devDependencies": {
+    "vercel": "65.16.0"
+  }
+}
