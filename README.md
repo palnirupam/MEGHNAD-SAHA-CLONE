@@ -47,13 +47,20 @@ Deploy to production:
 npm run deploy:prod
 ```
 
-For a Vercel dashboard import, select the repository and leave the framework preset as **Other**. The included [`vercel.json`](./vercel.json) serves static files directly and routes application URLs back to `index.html`.
+Generate the same static output locally:
+
+```bash
+npm run build
+```
+
+For a Vercel dashboard import, select the repository and leave the framework preset as **Other**. Vercel runs `node build.mjs`, publishes `dist/`, and routes application URLs back to `index.html`.
 
 ## Project structure
 
 ```text
 .
 ├── assets/          # Production JavaScript, CSS, fonts, and media
+├── build.mjs        # Creates the static Vercel output in dist/
 ├── images/          # Public image assets
 ├── index.html       # Application entry point
 ├── server.mjs       # Local static server with SPA fallback

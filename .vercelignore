@@ -1,6 +1,9 @@
-node_modules
-.playwright-mcp
-server.mjs
+/node_modules
+/dist
+/.playwright-mcp
+/server.mjs
+/package.json
+/package-lock.json
 /local-desktop-*.png
 /local-mobile-*.png
 /original-desktop-*.png
