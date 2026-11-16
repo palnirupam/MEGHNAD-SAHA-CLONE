@@ -128,9 +128,17 @@ src="https://www.facebook.com/tr?id=2234844260583738&ev=PageView&noscript=1"
 <!-- End Meta Pixel Code (noscript) -->
 
 <script>
+const keepAdmissionLocal = () => {
+  const link = document.querySelector('a[href^="https://msit.edu.in/enquiry-form"], a[href^="https://www.msit.edu.in/enquiry-form"]');
+  if (!link) return;
+  link.href = '/enquiry-form';
+  link.removeAttribute('target');
+};
+new MutationObserver(keepAdmissionLocal).observe(document.getElementById('root'), { childList: true, subtree: true });
+
 document.addEventListener('click', function (event) {
   const link = event.target.closest('a[href]');
-  if (!link || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+  if (!link || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || (link.target && link.target !== '_self')) return;
   const url = new URL(link.href);
   if (url.hostname === 'msit.edu.in' || url.hostname === 'www.msit.edu.in') {
     event.preventDefault();
