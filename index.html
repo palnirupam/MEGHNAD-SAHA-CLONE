@@ -130,7 +130,7 @@ src="https://www.facebook.com/tr?id=2234844260583738&ev=PageView&noscript=1"
 <script>
 document.addEventListener('click', function (event) {
   const link = event.target.closest('a[href]');
-  if (!link || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || (link.target && link.target !== '_self')) return;
+  if (!link || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
   const url = new URL(link.href);
   if (url.hostname === 'msit.edu.in' || url.hostname === 'www.msit.edu.in') {
     event.preventDefault();
